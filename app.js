@@ -8,6 +8,7 @@ let app = express();
 let bot = new Bot();
 
 app.get('/', (req, res) => {
+  // Check to make sure the request is coming from Slack
   if(req.query.token != config.token) return res.sendStatus(401);
 
   bot.searchGoogle(req.query.text).then((results) => {
@@ -22,7 +23,8 @@ app.get('/', (req, res) => {
         title_link: result.href,
         text: result.description
       };
-      if(!/^Images/.test(result.title)) {
+      // Exclude dead links to Images, News, and Books
+      if(!/^Images/.test(result.title) && !/^News/.test(result.title) && !/^Books/.test(result.title)) {
         message.attachments.push(attachment);
       }
     }
