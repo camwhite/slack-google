@@ -36,4 +36,6 @@ app.get('/', (req, res) => {
   });
 });
 
-app.listen(9000);
+app.listen(3001, () => {
+  console.log('Express app listening on port 3001 :p')
+});
