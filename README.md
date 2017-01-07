@@ -1,7 +1,7 @@
 # Slack Google Search
 **It posts top 5 hits from google**
 
-![](http://i.imgur.com/F70jBP2.png)
+![](https://i.imgur.com/F70jBP2.png)
 
 ### Installation & Setup
 
