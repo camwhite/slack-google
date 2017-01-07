@@ -12,6 +12,6 @@
   },
   "dependencies": {
     "express": "^4.13.4",
-    "google": "^1.4.0",
+    "google": "^1.4.0"
   }
 }
